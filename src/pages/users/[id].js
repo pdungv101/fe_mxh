@@ -30,7 +30,14 @@ const UserProfile = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [showCoverModal, setShowCoverModal] = useState(false);
-  const { user, setUser, posts, loading, error, setError } = useUserData(id);
+  const {
+    user,
+    setUser,
+    posts = [],
+    loading,
+    error,
+    setError,
+  } = useUserData(id);
 
   const [selectedMenu, setSelectedMenu] = useState("Posts");
 
